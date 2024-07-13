@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        "play": ["Play", "sans-serif"],
+      },
+      colors:{
+        primary: "#FBA919",
+      },
+      backgroundImage: {
+        'ruins': "url('/assets/destroyed-city.jpg')",
+        'headphone': "url('/assets/hero-headphone.png')",
+      }
+    },
   },
   plugins: [],
 }

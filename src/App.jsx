@@ -1,17 +1,11 @@
-
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import WelcomeScreen from './components/WelcomeScreen'
+import Hero from "./sections/Hero";
 
 function App() {
-
   return (
     <>
-    <Navbar/>
-    <WelcomeScreen/>
-    <Footer/>
+      <Hero />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
