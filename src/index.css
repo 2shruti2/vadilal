@@ -1,21 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
-    @apply font-play;
+@layer base {
+  body {
+    @apply font-paytone;
   }
 
-  html{
+  html {
     user-select: none;
+  }
+
+  .gradient {
+    background: rgb(230, 116, 170);
+    background: linear-gradient(
+      90deg,
+      rgba(230, 116, 170, 1) 44%,
+      rgba(225, 146, 56, 1) 71%,
+      rgba(133, 216, 189, 1) 96%
+    );
+  }
+  
+  .gradient-sm {
+    background: rgb(230, 116, 170);
+    background: linear-gradient(
+      36deg,
+      rgba(230, 116, 170, 1) 44%,
+      rgba(225, 146, 56, 1) 71%,
+      rgba(133, 216, 189, 1) 96%
+    );
+  }
+  
+  .wave {
+    --mask: radial-gradient(
+          58.31px at 50% calc(100% - 80px),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 100px) 0/200px 100%,
+      radial-gradient(58.31px at 50% calc(100% + 30px), #0000 99%, #000 101%) 50%
+        calc(100% - 50px) / 200px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+  
+  .wave-sm {
+    --mask:
+      radial-gradient(41.38px at 50% calc(100% - 58.5px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+      radial-gradient(41.38px at 50% calc(100% + 28.5px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
   }
 }
 
-@layer{
-  .section-x-padding{
+@layer {
+  .section-x-padding {
     @apply px-7 sm:px-10;
   }
 }
