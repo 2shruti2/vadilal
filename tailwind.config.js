@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        "play": ["Play", "sans-serif"],
+        "paytone": ["Paytone One", "sans-serif"],
       },
       colors:{
         primary: "#FBA919",
