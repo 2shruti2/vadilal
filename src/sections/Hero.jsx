@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div id="hero">
       <Navbar />
-      <div className="w-screen h-screen bg-ruins max-sm:bg-right-bottom bg-cover bg-no-repeat flex max-sm:flex-col">
+      <div className=" h-screen bg-ruins max-sm:bg-right-bottom bg-cover bg-no-repeat flex max-sm:flex-col">
         <div className="flex-1">
           <h1 className="text-white text-6xl font-extrabold text-center mt-[40%]">
             LEVEL UP WITH{" "}
