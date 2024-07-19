@@ -7,7 +7,7 @@
 @layer base{
   body{
     @apply font-play;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   html{
