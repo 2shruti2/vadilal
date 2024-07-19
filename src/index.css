@@ -127,3 +127,40 @@
 
   /* marquee section end  */
 }
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply font-play;
+    overflow-x: hidden;
+  }
+
+  html{
+    user-select: none;
+  }
+}
+
+@layer{
+  .section-x-padding{
+    @apply px-7 sm:px-10;
+  }
+  
+  #image-trackId{
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  .image-track1{
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
+  }
+}
