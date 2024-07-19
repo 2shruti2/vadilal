@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+
   body {
-    @apply font-paytone;
+    @apply font-paytone overflow-x-hidden;
   }
 
   html {
@@ -60,7 +61,7 @@
   }
 }
 
-@layer {
+@layer components{
   .section-x-padding {
     @apply px-7 sm:px-10;
   }
@@ -126,29 +127,9 @@
   }
 
   /* marquee section end  */
-}
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  /* our products section start */
 
-@layer base{
-  body{
-    @apply font-play;
-    overflow-x: hidden;
-  }
-
-  html{
-    user-select: none;
-  }
-}
-
-@layer{
-  .section-x-padding{
-    @apply px-7 sm:px-10;
-  }
-  
   #image-trackId{
     display: flex;
     gap: 4vmin;
@@ -163,4 +144,7 @@
     object-fit: cover;
     object-position: center;
   }
+
+  /* our products section end */
+
 }
