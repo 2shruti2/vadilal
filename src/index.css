@@ -59,6 +59,28 @@
   .section-x-padding {
     @apply px-7 sm:px-10;
   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    @apply font-play;
+    overflow-x: hidden;
+  }
+
+  html{
+    user-select: none;
+  }
+}
+
+@layer{
+  .section-x-padding{
+    @apply px-7 sm:px-10;
+  }
   
   #image-trackId{
     display: flex;
