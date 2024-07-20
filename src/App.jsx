@@ -1,4 +1,5 @@
 import Hero from "./sections/Hero";
+// import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Hero />
       <MarqueeSlider/>
+      {/* <OurProduct/> */}
     </>
   );
 }
