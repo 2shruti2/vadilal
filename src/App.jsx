@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Hero from "./sections/Hero";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+// import OurProduct from "./sections/our-products/OurProduct"
+import MarqueeSlider from "./sections/MarqueeSlider";
 
 function App() {
   const lenis = useLenis(({ scroll }) => {
@@ -10,7 +11,9 @@ function App() {
   return (
     <ReactLenis root>
       <Hero />
-    </ReactLenis>
+      <MarqueeSlider/>
+      {/* <OurProduct/> */}
+    </>
   );
 }
 
