@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+
   body {
-    @apply font-paytone;
-    overflow-x: hidden;
+    @apply font-paytone overflow-x-hidden;
   }
 
   html {
@@ -23,7 +23,7 @@
       rgba(133, 216, 189, 1) 96%
     );
   }
-  
+
   .gradient-sm {
     background: rgb(230, 116, 170);
     background: linear-gradient(
@@ -33,7 +33,7 @@
       rgba(133, 216, 189, 1) 96%
     );
   }
-  
+
   .wave {
     --mask: radial-gradient(
           58.31px at 50% calc(100% - 80px),
@@ -41,29 +41,94 @@
           #0000 101%
         )
         calc(50% - 100px) 0/200px 100%,
-      radial-gradient(58.31px at 50% calc(100% + 30px), #0000 99%, #000 101%) 50%
-        calc(100% - 50px) / 200px 100% repeat-x;
+      radial-gradient(58.31px at 50% calc(100% + 30px), #0000 99%, #000 101%)
+        50% calc(100% - 50px) / 200px 100% repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
   }
-  
+
   .wave-sm {
-    --mask:
-      radial-gradient(41.38px at 50% calc(100% - 58.5px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
-      radial-gradient(41.38px at 50% calc(100% + 28.5px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    --mask: radial-gradient(
+          41.38px at 50% calc(100% - 58.5px),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 60px) 0/120px 100%,
+      radial-gradient(41.38px at 50% calc(100% + 28.5px), #0000 99%, #000 101%)
+        50% calc(100% - 30px) / 120px 100% repeat-x;
     -webkit-mask: var(--mask);
-            mask: var(--mask);
+    mask: var(--mask);
   }
 }
 
-@layer {
+@layer components{
   .section-x-padding {
     @apply px-7 sm:px-10;
   }
 
-  .slider-container{
+  /* marquee section start */
+
+  .slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 10% 90%,
+      transparent
+    );
+  }
+  .slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
     position: relative;
   }
+  .slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc(
+      (10s / var(--quantity)) * (var(--position) - 1)
+    ) !important;
+  }
+  .slider .list .item img {
+    width: 100%;
+  }
+  @keyframes autoRun {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc(var(--width) * -1);
+    }
+  }
+  .slider:hover .item {
+    animation-play-state: paused !important;
+    filter: grayscale(1);
+  }
+  .slider .item:hover {
+    filter: grayscale(0);
+  }
+  .slider[data-reverse="true"] .item {
+    animation: reversePlay 10s linear infinite;
+  }
+  @keyframes reversePlay {
+    from {
+      left: calc(var(--width) * -1);
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+  /* marquee section end  */
+
+  /* our products section start */
 
   #image-trackId{
     display: flex;
@@ -78,4 +143,7 @@
     object-position: 100% center;
     border-radius: 20px;
   }
+
+  /* our products section end */
+
 }
