@@ -1,15 +1,14 @@
-import { useEffect } from "react";
+
 import Hero from "./sections/Hero";
 // import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  });
+  const locomotiveScroll = new LocomotiveScroll();
 
   return (
-    <ReactLenis root>
+    <>
       <Hero />
       <MarqueeSlider/>
       {/* <OurProduct/> */}

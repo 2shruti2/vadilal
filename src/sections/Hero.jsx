@@ -2,7 +2,11 @@ import Navbar from "../components/Navbar";
 
 const Hero = () => {
   return (
-    <div id="hero" className="w-full h-screen gradient-sm sm:gradient max-sm:wave-sm sm:wave">
+    <div
+    data-scroll
+      data-scroll-section
+      data-scroll-speed="-.1"
+    id="hero" className="w-full h-screen gradient-sm sm:gradient max-sm:wave-sm sm:wave">
       <Navbar />
       <div className=" h-screen bg-ruins max-sm:bg-right-bottom bg-cover bg-no-repeat flex max-sm:flex-col">
         <div className="flex-1">
