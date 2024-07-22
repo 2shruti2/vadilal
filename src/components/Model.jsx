@@ -1,19 +1,13 @@
-import { Canvas, useFrame  } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import { useState, useEffect,  useRef, } from 'react';
 
 const ModelGlb = () => {
   const { scene } = useGLTF('/pink-model.glb');
 
   // scene.scale.set(0.4, 0.4, 0.4);
   // scene.position.set(0, -1, 0);
-  scene.scale.set(3.5, 3.5, 3.5);
+  scene.scale.set(5, 5, 5);
   scene.position.set(0, -0.5, 0);
-  scene.rotation.set(
-    0, // Rotation around X-axis
-    0, // Rotation around Y-axis
-    Math.PI / 16  // Rotation around Z-axis
-  );
 
   return <primitive object={scene} width="100vw" height="100vh" />;
 };
@@ -21,7 +15,7 @@ const ModelGlb = () => {
 const Model = () => {
 
   return (
-    <Canvas className="canvas-container z-[-1] border-none" camera={{ position: [0, 0, 5], fov: 25 }}  >
+    <Canvas className="canvas-container z-[-1] border-none animate-updown" camera={{ position: [0, 3.5, 5], fov: 25 }}  >
       <ambientLight intensity={2}/>
 
       <pointLight position={[-3, 3, 3]} intensity={5} /> {/* Top left light */}
