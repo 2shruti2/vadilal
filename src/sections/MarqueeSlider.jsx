@@ -50,8 +50,8 @@ const MarqueeSlider = () => {
         className="slider"
         data-reverse="true"
         style={{
-          "--width": "260px",
-          "--height": "260px",
+          "--width": "20rem",
+          "--height": "20rem",
           "--quantity": "9"
         }}
       >
