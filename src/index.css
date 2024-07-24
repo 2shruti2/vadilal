@@ -86,6 +86,17 @@
     @apply px-7 sm:px-10;
   }
 
+  /* hero section starts */
+  .letter {
+    transition: filter 0.2s ease;
+  }
+  
+  .inner-letter {
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+  /* hero section end */
+
   /* marquee section start */
 
   .slider {
