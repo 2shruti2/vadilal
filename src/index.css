@@ -66,6 +66,70 @@
     @apply px-7 sm:px-10;
   }
 
+
+  /* nav bar section  start*/
+
+  .button-outline1{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation:  morph 4s linear infinite;
+  }
+  @keyframes morph {
+    0%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+      border-radius:30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+  .button-outline2{
+    border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+  }
+
+  #hamburger{
+    position: relative;
+    width: 2.5vmax;
+    height: 2.5vmax;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hamburger span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 24px;
+    height: 1.25px;
+    background: #Fff;
+    transition: transform 0.25s;
+
+  }
+  #hamburger span::before{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 1.25px;
+    background: #fff;
+    transform: translateY(-4px);
+    transition: transform 0.25s;
+  }
+
+  #hamburger .active span{
+    transform: rotate(45deg);
+  }
+
+  #hamburger .active span::before{
+    top: unset;
+    width: 24px;
+    transform: rotate(-90deg);
+  }
+
   /* marquee section start */
 
   .slider {
