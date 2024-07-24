@@ -1,15 +1,31 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const MarqueeSlider = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [50, 0]);
+  const opacity = useTransform(scrollY, [0, 300], [0, 1]);
+
   return (
     <div className="w-full py-7 sm:py-16">
-
-      <h1 className="text-center text-5xl text-primary mb-10 sm:mb-20">Every Bite, a Delight!</h1>
+      <motion.div
+        style={{
+          position: "relative",
+        }}
+      >
+        <motion.h1
+          className="text-center text-5xl text-primary mb-10 sm:mb-20"
+          style={{ opacity, y }}
+        >
+          Every Bite, a Delight!
+        </motion.h1>
+      </motion.div>
 
       <div
         className="slider"
         style={{
           "--width": "100px",
           "--height": "50px",
-          "--quantity": "10"
+          "--quantity": "10",
         }}
       >
         <div className="list">
@@ -52,7 +68,7 @@ const MarqueeSlider = () => {
         style={{
           "--width": "20rem",
           "--height": "20rem",
-          "--quantity": "9"
+          "--quantity": "9",
         }}
       >
         <div className="list">
@@ -90,4 +106,3 @@ const MarqueeSlider = () => {
 };
 
 export default MarqueeSlider;
-
