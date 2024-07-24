@@ -2,16 +2,15 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { useRef, useState } from "react";
-
 import { Tilt } from "react-tilt";
-
-import { MdOutlineMenu } from "react-icons/md";
 import { MdOutlineClose } from "react-icons/md";
 import img from "../assets/product-assets/pint.jpg";
+// import img2 from "../assets/product-assets/vadilal-logo.jpeg";
+
 
 gsap.registerPlugin(CSSRulePlugin);
 
-const Navbar = () => {
+const Navbar = ({logo}) => {
   const [sideBar, setSideBar] = useState(false);
   useGSAP(() => {
     let tl = gsap.timeline();
@@ -35,7 +34,7 @@ const Navbar = () => {
     <>
       <nav className=" w-full bg-blue-200 bg-transparent py-4 absolute top-0 flex justify-center items-center ">
         <img
-          src="https://www.vadilalicecreams.com/_next/static/media/logo.9cfdd9e4.svg"
+          src={logo}
           className="w-28 opacity-100"
           alt=""
         ></img>
@@ -45,6 +44,7 @@ const Navbar = () => {
           // ref={toggleButton}
           onClick={() => {
             setSideBar(!sideBar);
+            console.log(sideBar)
           }}
           className="btn opacity-100 absolute top-0 right-0 lg:right-24  w-20 h-20 flex justify-center items-center  z-[2] cursor-pointer"
           id="toggelBtn"
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* sidebar */}
         {sideBar && (
-          <div className="sideBar w-full text-white h-screen fixed top-0 overflow-hidden  bg-[#00626B] lg:flex  px-4 md:px-8 py-4 z-50">
+          <div className="sideBar w-full text-white h-screen fixed top-0 overflow-hidden  bg-[#00626B] lg:flex  px-4 md:px-8 py-4 z-[9999]">
             <button
                 onClick={() => {
                   setSideBar(!sideBar);

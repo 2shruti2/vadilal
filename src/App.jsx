@@ -6,6 +6,7 @@ import Hero from "./sections/Hero";
 // import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
 import LocomotiveScroll from "locomotive-scroll";
+import Footer from "./components/Footer";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -33,8 +34,10 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
+          <Navbar logo={"assets/vadilal.jpeg"}/>
           <Hero />
           <MarqueeSlider />
+          <Footer/>
           {/* <OurProduct /> */}
         </>
       )}
