@@ -35,8 +35,9 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
-          <Navbar logo={"/assets/vadial-logo.jpeg"}/>
-          <Hero />
+          <Navbar logo={"assets/vadilal.jpeg"}/>
+          <Hero /> 
+          <div className="h-screen w-full bg-black"></div>
           <MarqueeSlider />
           <Waah/>
           <div className="h-screen w-full bg-black"></div>
