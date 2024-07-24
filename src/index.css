@@ -47,8 +47,8 @@
     background: rgb(230, 116, 170);
     background: linear-gradient(
       36deg,
-      rgba(230, 116, 170, 1) 44%,
-      rgba(225, 146, 56, 1) 71%,
+      rgb(230, 116, 170) 44%,
+      rgb(225, 146, 56) 71%,
       rgba(133, 216, 189, 1) 96%
     );
   }
