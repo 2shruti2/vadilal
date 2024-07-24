@@ -32,7 +32,7 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className=" w-full bg-blue-200 bg-transparent py-4 absolute top-0 flex justify-center items-center ">
+      <nav className="w-full bg-blue-200 bg-transparent py-4 absolute top-0 flex justify-center items-center z-20">
         <img
           src={logo}
           className="w-28 opacity-100"
