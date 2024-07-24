@@ -16,9 +16,9 @@ const Model = () => {
       className="canvas-container z-[-1] border-none animate-updown"
       camera={{ position: [0, 3.5, 5], fov: 25 }}
     >
-      <ambientLight intensity={0.9} />
+      <ambientLight intensity={2.7} />
 
-      <pointLight position={[0, 3, 0]} intensity={0.2} />
+      <pointLight position={[0, 3, 0]} intensity={0.5} />
 
       <ModelGlb />
       <OrbitControls enableZoom={false} autoRotate />
