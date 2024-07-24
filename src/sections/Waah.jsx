@@ -29,10 +29,10 @@ const Waah = () => {
   return (
     <div
       id="waah"
-      className="w-full h-screen bg-[#3de4c0] max-sm:wave-sm sm:wave relative overflow-hidden"
+      className="w-full h-screen bg-teal-400 relative overflow-hidden"
     >
       <div className="z-30 absolute w-full h-full text-center flex-col flex gap-16 sm:gap-2 justify-center items-center text-white">
-        <div className="max-sm:hidden font-banger tracking-wider uppercase text-7xl flex">
+        <div className="max-sm:hidden font-banger tracking-wider uppercase text-4xl sm:text-7xl flex">
           {letters.map((letter, index) => (
             <motion.span
               key={index}
@@ -104,7 +104,7 @@ const Waah = () => {
         whileInView={{ opacity: 1 }}
         src="/images/hero02.png"
         alt="ice cream"
-        className="max-sm:hidden absolute top-0 -left-80 z-20 h-[55rem]"
+        className="absolute top-0 -left-80 z-20 h-[55rem]"
       />
       {/* <motion.img
         animate={{ x: 100 }}

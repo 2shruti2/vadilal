@@ -12,7 +12,7 @@ const ModelGlb = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call it initially to set the correct state
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -33,7 +33,7 @@ const ModelGlb = () => {
 const Model = () => {
   return (  
     <Canvas
-      className="canvas-container z-[100] border-none animate-updown"
+      className="canvas-container z-[-1] sm:z-[100] border-none animate-updown"
       camera={{ position: [0, 3.5, 5], fov: 25 }}
     >
       <ambientLight intensity={3.5} />
