@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
 import MarqueeSlider from "./sections/MarqueeSlider";
-// import OurProduct from "./sections/our-products/OurProduct"
+import Advertisements from "./sections/advertisements/Advertisemts"
+import Products from "./sections/products/Products"
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -27,9 +28,10 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
-          <Hero />
-          <MarqueeSlider />
-          {/* <OurProduct /> */}
+          {/* <Hero />
+          <Advertisements />
+          <MarqueeSlider />                    */}
+          <Products />
         </>
       )}
     </>

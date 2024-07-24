@@ -1,8 +1,6 @@
 import React,{ useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-// import 'swiper/css/pagination'
-// import 'swiper/css/navigation';
 import 'swiper/css/free-mode'
 
 import { Pagination, FreeMode} from 'swiper/modules'
@@ -74,11 +72,6 @@ const Advertisemts = () => {
       clickable: true
      }}
 
-    //   autoplay={{
-    //   delay: 1000,
-    //   disableOnInteraction: true,
-    // }}
-
      freeMode={true}
         modules={[FreeMode, Pagination]}
      className='mySwiper max-w-[90%] lg:max-w-[80%]'
@@ -87,9 +80,9 @@ const Advertisemts = () => {
      data-prev-percentage="0"
      >
 
-       <SwiperSlide>
+       <SwiperSlide draggable="false">
         <div className='flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-2xl overflow-hidden px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] cursor-pointer'>
-          <div className='absolute inset-0 bg-cover slideImage' style={{backgroundImage: `url(${vadilalCones})`}} />
+          <div className='absolute inset-0 bg-cover slideImage' draggable="false" style={{backgroundImage: `url(${vadilalCones})`}} />
           <div className='absolute inset-0 bg-black opacity-10 group-hover:opacity-50' />
           <div className='relative hidden flex-col gap-3 group-hover:flex'>
           <FaIceCream className="group-hover:text-blue-400  w-[32px] h-[32px]"/>
@@ -99,9 +92,9 @@ const Advertisemts = () => {
         </div>
        </SwiperSlide>
 
-        <SwiperSlide>   
+        <SwiperSlide draggable="false">   
           <div className='flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-2xl overflow-hidden px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] cursor-pointer'>
-        <div className='absolute inset-0 bg-cover slideImage' style={{backgroundImage: `url(${peachCobbler})`}}/>
+        <div className='absolute inset-0 bg-cover slideImage' draggable="false" style={{backgroundImage: `url(${peachCobbler})`}}/>
         <div className='absolute inset-0 bg-black opacity-10 group-hover:opacity-50' />
         <div className='relative hidden flex-col gap-3 group-hover:flex'>
           <LuIceCream2 className="group-hover:text-blue-400 w-[32px] h-[32px]"/>
@@ -111,9 +104,9 @@ const Advertisemts = () => {
         </div>
         </SwiperSlide>
 
-        <SwiperSlide>  
+        <SwiperSlide draggable="false">  
           <div className='flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-2xl overflow-hidden px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] cursor-pointer'>
-          <div className='absolute inset-0 bg-cover slideImage' style={{backgroundImage: `url(${vadilalGourmet})`}} />
+          <div className='absolute inset-0 bg-cover slideImage' draggable="false" style={{backgroundImage: `url(${vadilalGourmet})`}} />
           <div className='absolute inset-0 bg-black opacity-10 group-hover:opacity-50' />
           <div className='relative hidden flex-col gap-3 group-hover:flex'>
           <GoContainer className="group-hover:text-blue-400 w-[32px] h-[32px]"/>
