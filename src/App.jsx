@@ -1,14 +1,14 @@
+import Advertisemts from "./sections/advertisements/Advertisemts";
 import Hero from "./sections/Hero";
-// import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
-import OurProduct from "./sections/our-products/OurProduct"
+// import OurProduct from "./sections/our-products/OurProduct"
 function App() {
   return (
     <>
-      <Hero />
-      <OurProduct />
-      <MarqueeSlider/>
-      {/* <OurProduct/> */}
+      {/* <Hero /> */}
+      {/* <OurProduct /> */}
+      <Advertisemts />
+      {/* <MarqueeSlider/> */}
     </>
   );
 }

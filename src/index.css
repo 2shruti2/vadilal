@@ -130,18 +130,27 @@
 
   /* our products section start */
 
+  .slider-container{
+    position: relative;
+  }
+
   #image-trackId{
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 50%;
+    left: 20%;
     top: 50%;
     transform: translate(0%, -50%);
   }
   .image-track1{
     object-fit: cover;
-    object-position: 100% center;
+    object-position: 0% center;
     border-radius: 20px;
+  }
+
+  .slideImage{
+
+    background-position: 50% center;
   }
 
   /* our products section end */
