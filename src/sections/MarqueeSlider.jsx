@@ -15,7 +15,7 @@ const MarqueeSlider = () => {
         }}
       >
         <motion.h1
-          className="text-center text-5xl text-primary mb-10 sm:mb-20"
+          className="text-center text-5xl text-main mb-10 sm:mb-20"
           style={{ opacity, y }}
         >
           Every Bite, a Delight!
