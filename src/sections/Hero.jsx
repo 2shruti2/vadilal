@@ -101,7 +101,7 @@ const Hero = () => {
       </div>
       <Model />
 
-      <motion.img
+      {/* <motion.img
         animate={{ x: 100 }}
         transition={{ delay: 1 }}
         initial={{ opacity: 0 }}
@@ -118,7 +118,7 @@ const Hero = () => {
         src="/images/hero01.png"
         alt="ice cream"
         className="max-sm:hidden absolute top-[10%] -right-0 z-20 h-[35rem]"
-      />
+      /> */}
     </div>
   );
 };
