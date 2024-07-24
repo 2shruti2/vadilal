@@ -11,7 +11,7 @@ const ModelGlb = () => {
 };
 
 const Model = () => {
-  return (
+  return (  
     <Canvas
       className="canvas-container z-[-1] border-none animate-updown"
       camera={{ position: [0, 3.5, 5], fov: 25 }}

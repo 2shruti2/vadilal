@@ -35,7 +35,7 @@ function App() {
       ) : (
         <>
           <Navbar logo={"assets/vadilal.jpeg"}/>
-          <Hero />
+          {/* <Hero /> */}
           <MarqueeSlider />
           <Footer/>
           {/* <OurProduct /> */}
