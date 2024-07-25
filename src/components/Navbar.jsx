@@ -49,7 +49,7 @@ const Navbar = ({logo}) => {
           onClick={() => {
             setSideBar(!sideBar);
           }}
-          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[2] cursor-pointer"
+          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[999] cursor-pointer"
           id="toggelBtn"
         >
           <div className="button-outline button-outline1  absolute  w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black "></div>

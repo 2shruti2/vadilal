@@ -7,6 +7,8 @@ import LocomotiveScroll from "locomotive-scroll";
 import Footer from "./components/Footer";
 import Waah from "./sections/Waah";
 
+
+
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
