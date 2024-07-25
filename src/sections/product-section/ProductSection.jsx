@@ -26,11 +26,42 @@ const ProductSection = () => {
 
  mncircles.forEach(function(val, index){
   val.addEventListener("click", function(){
-    gsap.to("#circle", {
-      rotate: (3-(index+1))*10,
-      duration: 1.5,
-      ease: Expo.easeInOut,
-    })
+    if(index===0){
+      gsap.to("#circle", {
+        rotate: -144,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      })
+    }
+    if(index===1){
+      gsap.to("#circle", {
+        rotate: -72,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      })
+    }
+    if(index===2){
+      gsap.to("#circle", {
+        rotate: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      })
+    }
+    if(index===3){
+      gsap.to("#circle", {
+        rotate: 72,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      })
+    }
+    if(index===4){
+      gsap.to("#circle", {
+        rotate: 144,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      })
+    }
+    // (3-(index+1))*10
     greyout();
 
     gsap.to(this, {
@@ -49,7 +80,7 @@ const ProductSection = () => {
   })
 
   gsap.to(sec, {
-    opacity: 0.4,
+    opacity: 1,
   })
  }
 
@@ -62,16 +93,16 @@ const ProductSection = () => {
     })
   })
   return (
-    <div id="main">
-    <div id="circle">
+    <div id="main" className='hidden lg:flex'>
+    <div id="circle" className=' w-[100vh] h-[100vh] -left-[80vh]'>
       <div className="stripe str1">
         <div className="first">
           <div className="smcircle">
 
           </div>
         </div>
-        <div className="sec">
-          <img src={chocoFudge} alt="" className='productImg h-[100px] w-[100px]'/>
+        <div className="sec relative">
+          <img src={chocoFudge} alt="" className= '  productImg absolute top1/2 right-72 lg:-right-72 h-full w-full'/>
         </div>
       </div>
       <div className="stripe str2">
@@ -80,8 +111,8 @@ const ProductSection = () => {
             
         </div>
       </div>
-      <div className="sec">
-      <img src={rajwadi} alt="" className='productImg h-[100px] w-[100px]'/>
+      <div className="sec relative">
+      <img src={rajwadi} alt="" className='productImg absolute top1/2 lg:-right-72 lg:h-full lg:w-full'/>
       </div>
       </div>
       <div className="stripe str3">
@@ -90,8 +121,8 @@ const ProductSection = () => {
             
       </div>
       </div>
-      <div className="sec">
-      <img src={chocoCrackle} alt="" className='productImg h-[100px] w-[100px]'/>
+      <div className="sec relative">
+      <img src={chocoCrackle} alt="" className='productImg absolute top1/2 lg:-right-72 h-full w-full'/>
       </div>
       </div>
       <div className="stripe str4">
@@ -100,8 +131,8 @@ const ProductSection = () => {
             
       </div>
       </div>
-      <div className="sec">
-      <img src={chocoCrackleFlingo} alt="" className='productImg h-[100px] w-[100px]'/>
+      <div className="sec relative">
+      <img src={chocoCrackleFlingo} alt="" className='productImg absolute top1/2 lg:-right-72 h-full w-full'/>
       </div>
       </div>
       <div className="stripe str5">
@@ -110,8 +141,8 @@ const ProductSection = () => {
             
         </div>
       </div>
-      <div className="sec">
-   <img src={cookieIcecreamSandwich} alt="" className='productImg h-[100px] w-[100px]'/>
+      <div className="sec relative">
+   <img src={cookieIcecreamSandwich} alt="" className='productImg absolute top1/2 lg:-right-72 h-full w-full'/>
       </div>
       </div>
     </div>
