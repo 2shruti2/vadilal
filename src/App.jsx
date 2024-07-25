@@ -1,11 +1,16 @@
+
+import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
 import MarqueeSlider from "./sections/MarqueeSlider";
-import Advertisements from "./sections/advertisements/Advertisemts"
-import ProductSection from "./sections/product-section/ProductSection"
+import LocomotiveScroll from "locomotive-scroll";
+import Footer from "./components/Footer";
+import Waah from "./sections/Waah";
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,10 +34,13 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
-          {/* <Hero /> */}
-          <Advertisements />
-          {/* <MarqueeSlider />                    */}
-          {/* <ProductSection /> */}
+          <Navbar logo={"assets/vadilal.jpeg"}/>
+          <Hero /> 
+          <MarqueeSlider />
+          <Waah/>
+          <div className="h-screen w-full bg-black"></div>
+          <Footer/>
+          {/* <OurProduct /> */}
         </>
       )}
     </>

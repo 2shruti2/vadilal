@@ -6,14 +6,16 @@ const MarqueeSlider = () => {
   const opacity = useTransform(scrollY, [0, 300], [0, 1]);
 
   return (
-    <div className="w-full py-7 sm:py-16">
+    <div data-scroll
+    data-scroll-section
+    data-scroll-speed="-.1" className="w-full py-7 sm:py-16 ">
       <motion.div
         style={{
           position: "relative",
         }}
       >
         <motion.h1
-          className="text-center text-5xl text-primary mb-10 sm:mb-20"
+          className="text-center text-5xl text-main mb-10 sm:mb-20"
           style={{ opacity, y }}
         >
           Every Bite, a Delight!

@@ -1,42 +1,18 @@
-import { useState } from "react";
+
 import Model from "../components/Model";
-import Navbar from "../components/Navbar";
-import { motion } from "framer-motion";
+
 
 const Hero = () => {
-  const heading = "Moments of Delight for Everyone";
 
-  const letters = heading.split("");
-
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
-  const text = "Tasteful experiences that make you go Waah!";
-  const words = text.split(" ");
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const wordVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
 
   return (
     <div
       id="hero"
-      className="w-full h-screen gradient-sm sm:gradient max-sm:wave-sm sm:wave relative"
+      className="w-full h-screen gradient-sm sm:gradient max-sm:wave-sm sm:wave relative overflow-hidden"
     >
-      <Navbar />
       <div className="z-30 absolute w-full h-full text-center flex-col flex gap-16 sm:gap-2 justify-center items-center text-white">
         
-        <div className="max-sm:hidden font-banger tracking-wider uppercase text-7xl flex">
+        {/* <div className="max-sm:hidden font-banger tracking-wider uppercase text-7xl flex -translate-y-40">
           {letters.map((letter, index) => (
             <motion.span
               key={index}
@@ -69,13 +45,13 @@ const Hero = () => {
               </motion.span>
             </motion.span>
           ))}
-        </div>
+        </div> */}
 
-        <div className="sm:hidden font-banger tracking-wider uppercase text-7xl">
+        {/* <div className="sm:hidden font-banger tracking-wider uppercase text-7xl">
           Moments of <span className=""> Delight </span> for Everyone
         </div>
 
-        <div className="max-sm:hidden text-3xl flex">
+        <div className="max-sm:hidden translate-x-[30%] text-3xl flex">
           <motion.div
             className="flex"
             variants={containerVariants}
@@ -98,12 +74,12 @@ const Hero = () => {
         <div className="sm:hidden text-3xl">
           Tasteful experiences that make you go{" "}
           <span className="text-red-500"> Waah!</span>
-        </div>
+        </div> */}
 
       </div>
       <Model />
 
-      <motion.img
+      {/* <motion.img
         animate={{ x: 100 }}
         transition={{ delay: 1 }}
         initial={{ opacity: 0 }}
@@ -120,7 +96,7 @@ const Hero = () => {
         src="/images/hero01.png"
         alt="ice cream"
         className="max-sm:hidden absolute top-[10%] -right-0 z-20 h-[35rem]"
-      />
+      /> */}
     </div>
   );
 };
