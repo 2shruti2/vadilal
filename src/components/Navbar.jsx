@@ -34,7 +34,7 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className="w-full bg-[#e8e2d6]  py-2 flex justify-center items-center z-20">
+      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20">
         <motion.img
          initial={{y:30 , opacity : 0}}
          whileInView={{y:0 , opacity:1 }}
@@ -49,7 +49,7 @@ const Navbar = ({logo}) => {
           onClick={() => {
             setSideBar(!sideBar);
           }}
-          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[2] cursor-pointer"
+          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[999] cursor-pointer"
           id="toggelBtn"
         >
           <div className="button-outline button-outline1  absolute  w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black "></div>
@@ -102,7 +102,7 @@ const Navbar = ({logo}) => {
                   { title: "Home", nav: "#Home" },
                   { title: "Products", nav: "#Products" },
                   { title: "About", nav: "#About" },
-                  { title: "Contact", nav: "#Contact" },
+                  { title: "Advertisement", nav: "#Advertisement" },
                 ].map((item) => {
                   return (
                     <div className="w-fit h-fit overflow-hidden">
