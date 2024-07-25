@@ -18,7 +18,7 @@ function App() {
     const handleLoad = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 4200);
     };
 
     if (document.readyState === "complete") {
@@ -34,15 +34,15 @@ function App() {
       {loading ? (
         <ScreenLoader />
       ) : (
-        <>
-          <Navbar logo={"assets/vadilal.jpeg"}/>
-          <Hero /> 
+        <main >
+          <Navbar logo={"assets/vadial logo.webp"}/>
+          <Hero   /> 
           <MarqueeSlider />
           <Waah/>
-          <div className="h-screen w-full bg-black"></div>
+          <div  className="h-screen w-full bg-black"></div>
           <Footer/>
           {/* <OurProduct /> */}
-        </>
+        </main>
       )}
     </>
   );
