@@ -34,7 +34,7 @@ const Waah = () => {
   return (
     <div id="waah" className="w-full h-[60vh] sm:h-screen bg-teal-500 relative overflow-hidden">
       <div className="z-30 absolute w-full h-full text-center flex-col flex gap-16 sm:gap-2 justify-center items-center text-white">
-        <div className="max-sm:hidden font-banger tracking-wider uppercase text-4xl sm:text-7xl text-outline flex">
+        <div className="max-sm:hidden tracking-tighter uppercase text-2xl sm:text-6xl text-outline flex">
           {letters.map((letter, index) => (
             <motion.span
               key={index}
