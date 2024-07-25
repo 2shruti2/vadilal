@@ -18,8 +18,9 @@ module.exports = {
     },
     extend: {
       fontFamily:{
-        "paytone": ["Paytone One", "sans-serif"],
+        "paytone": ["Paytone One", "sans-serif" ],
         "banger": ["Bangers", "system-ui"],
+        custom :["panther_hunter"]
       },
       colors: {
         border: "hsl(var(--border))",

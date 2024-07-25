@@ -1,15 +1,14 @@
-
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
-// import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
 import LocomotiveScroll from "locomotive-scroll";
 import Footer from "./components/Footer";
 import Waah from "./sections/Waah";
 import Advertisemts from "./sections/advertisements/Advertisemts"
 import ProductSection from "./sections/product-section/ProductSection";
+import HorizontalSection from "./sections/HorizontalSection";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -20,7 +19,7 @@ function App() {
     const handleLoad = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 4200);
     };
 
     if (document.readyState === "complete") {
@@ -36,16 +35,16 @@ function App() {
       {loading ? (
         <ScreenLoader />
       ) : (
-        <>
-          {/* <Navbar logo={"assets/vadilal.jpeg"}/>
-          <Hero /> 
+        <main >
+          <Navbar logo={"assets/vadial logo.webp"}/>
+          <Hero   /> 
           <MarqueeSlider />
-          <Waah/>
-          <div className="h-screen w-full bg-black"></div>
-          <Footer/> */}
-          <ProductSection />
-
-        </>
+          <Waah/>      
+          <HorizontalSection/>
+          <Advertisemts/>
+          {/* <ProductSection/> */}
+          <Footer/>
+        </main>
       )}
     </>
   );
