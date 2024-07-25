@@ -34,7 +34,7 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className="w-full bg-[#e8e2d6]  py-2 flex justify-center items-center z-20">
+      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20">
         <motion.img
          initial={{y:30 , opacity : 0}}
          whileInView={{y:0 , opacity:1 }}
@@ -102,7 +102,7 @@ const Navbar = ({logo}) => {
                   { title: "Home", nav: "#Home" },
                   { title: "Products", nav: "#Products" },
                   { title: "About", nav: "#About" },
-                  { title: "Contact", nav: "#Contact" },
+                  { title: "Advertisement", nav: "#Advertisement" },
                 ].map((item) => {
                   return (
                     <div className="w-fit h-fit overflow-hidden">

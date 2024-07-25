@@ -39,7 +39,7 @@ function App() {
         <ScreenLoader />
       ) : (
         <main >
-          <Navbar logo={"assets/vadial logo.webp"}/>
+          <Navbar logo={"assets/vadial logo.webp"} />
           <Hero   /> 
           <MarqueeSlider />
           <Waah/>      
