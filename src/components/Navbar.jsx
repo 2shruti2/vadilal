@@ -34,7 +34,7 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20">
+      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20 relative">
         <motion.img
          initial={{y:30 , opacity : 0}}
          whileInView={{y:0 , opacity:1 }}
@@ -49,11 +49,11 @@ const Navbar = ({logo}) => {
           onClick={() => {
             setSideBar(!sideBar);
           }}
-          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[999] cursor-pointer lg:hidden"
+          className="btn opacity-100 fixed lg:absolute top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[999] cursor-pointer "
           id="toggelBtn"
         >
-          <div className="button-outline button-outline1  absolute  w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black "></div>
-          <div className="button-outline button-outline2  absolute   w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black"></div>
+          <div className="button-outline button-outline1  absolute bg-white w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black "></div>
+          <div className="button-outline button-outline2  absolute bg-white  w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black"></div>
           <div id="hamburger">
             <span> </span>
           </div>
