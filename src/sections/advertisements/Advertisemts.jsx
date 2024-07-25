@@ -55,7 +55,7 @@ const Advertisemts = () => {
    }, [])
 
   return (
-    <div className='flex items-start justify-center flex-col h-screen w-full gradient'>
+    <div className=' hidden lg:flex items-start justify-center flex-col h-screen w-full gradient'>
      <Swiper
      breakpoints={{
       340: {

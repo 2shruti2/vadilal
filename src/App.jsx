@@ -48,7 +48,7 @@ function App() {
           <Waah/>      
           <HorizontalSection/>
           <Advertisemts/>
-          {/* <ProductSection/> */}
+          <ProductSection/>
           <Footer/>
         </main>
       )}
