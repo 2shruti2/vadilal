@@ -91,7 +91,7 @@ const ProductSection = () => {
           </div>
         </div>
         <div className="sec opacity-[0.4] pl-[30px] w-[50%] h-[100%]">
-          <img src={chocoFudge} alt="" className='productImg h-[50px] md:h-[100px] lg:h-[150px] md:w-[100px] w-[50px] lg:w-[150px]'/>
+          <img src={chocoFudge} alt="" className='productImg h-[50px] md:h-[100px] lg:h-[200px] md:w-[100px] w-[50px] lg:w-[150px]'/>
           <h6 className='pl-[10px] text-[2.5vw] lg:text-[1vw] opacity-[0.5] font-[400]'>Choco Fudge</h6>
         </div>
       </div>

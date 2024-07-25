@@ -58,13 +58,17 @@ const Advertisemts = () => {
     <div className='flex items-start justify-center flex-col h-screen w-screen gradient'>
      <Swiper
      breakpoints={{
-      340: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+      310: {
+        slidesPerView: 1,
+        spaceBetween: 5,
       },
       700: {
+        slidesPerView: 2.2,
+        spaceBetween: 15,
+      },
+      1034: {
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 15,
       }
      }}
 
@@ -72,16 +76,18 @@ const Advertisemts = () => {
       clickable: true
      }}
 
+     centeredSlides={true}
+
      freeMode={true}
         modules={[FreeMode, Pagination]}
-     className='mySwiper max-w-[90%] lg:max-w-[80%]'
+     className='mySwiper pl-14 lg:pl-0 max-w-[90%] lg:max-w-[80%]'
      id='swiper-trackId'
      data-mouse-down-at="0" 
      data-prev-percentage="0"
      >
 
        <SwiperSlide draggable="false">
-        <div className='flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-2xl overflow-hidden px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] cursor-pointer'>
+        <div className='flex flex-col gap-6  mb-20 group relative shadow-lg text-white rounded-2xl overflow-hidden px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] cursor-pointer'>
           <div className='absolute inset-0 bg-cover slideImage' draggable="false" style={{backgroundImage: `url(${vadilalCones})`}} />
           <div className='absolute inset-0 bg-black opacity-10 group-hover:opacity-50' />
           <div className='relative hidden flex-col gap-3 group-hover:flex'>
