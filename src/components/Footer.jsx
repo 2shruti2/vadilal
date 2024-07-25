@@ -10,8 +10,7 @@ const Footer = () => {
 
   return (
     <div  className="w-full lg:px-20 h-fit pt-4 bg-[#00636B]  overflow-hidden text-white ">
-      <motion.div
-      
+      <motion.div  
       initial={{y:100 , opacity : 0}}
       whileInView={{y:0 , opacity:1 }}
       transition={{duration:1, ease: "easeInOut"}}
@@ -61,7 +60,7 @@ const Footer = () => {
         <motion.h2
         initial={{y:100 , opacity : 0}}
         whileInView={{y:0 , opacity:1 }}
-        transition={{duration:1, ease: easeInOut}}
+        transition={{duration:1, ease: "easeInOut"}}
           className=" hidden lg:flex text-[20vmax] lg:text-[30vmax] absolute -bottom-[60%] lg:-bottom-[44%] right-6 lg:right-28 leading-0 font-custom"
         >
           Vadilal
