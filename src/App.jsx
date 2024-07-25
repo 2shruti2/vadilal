@@ -8,6 +8,8 @@ import MarqueeSlider from "./sections/MarqueeSlider";
 import LocomotiveScroll from "locomotive-scroll";
 import Footer from "./components/Footer";
 import Waah from "./sections/Waah";
+import Advertisemts from "./sections/advertisements/Advertisemts"
+import ProductSection from "./sections/product-section/ProductSection";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -39,9 +41,8 @@ function App() {
           <Hero   /> 
           <MarqueeSlider />
           <Waah/>
-          <div  className="h-screen w-full bg-black"></div>
+          {/* <ProductSection /> */}        
           <Footer/>
-          {/* <OurProduct /> */}
         </main>
       )}
     </>
