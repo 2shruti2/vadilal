@@ -44,7 +44,7 @@ function App() {
           <div className="h-screen w-full bg-black"></div>
           <Footer/> */}
           <ProductSection />
-          {/* <OurProduct /> */}
+
         </>
       )}
     </>
