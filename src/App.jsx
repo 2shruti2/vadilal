@@ -38,15 +38,14 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
-          {/* <Navbar logo={"assets/vadilal.jpeg"}/>
+          <Navbar logo={"assets/vadilal.jpeg"}/>
           <Hero /> 
           <MarqueeSlider />
           <Waah/>
-          <div className="h-screen w-full bg-black"></div>
           <HorizontalSection/>
-          <Footer/> */}
-          <ProductSection />
-          {/* <OurProduct /> */}
+          <Advertisemts/>
+          {/* <ProductSection /> */}
+          <Footer/>
         </>
       )}
     </>
