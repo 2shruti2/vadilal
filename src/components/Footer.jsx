@@ -1,16 +1,20 @@
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebookF } from "react-icons/fa";
 import { ImYoutube } from "react-icons/im";
+import { easeInOut, motion } from "framer-motion";
+
+
 
 const Footer = () => {
 
 
-
-
-  
   return (
     <div  className="w-full lg:px-20 h-fit pt-4 bg-[#00636B]  overflow-hidden text-white ">
-      <div
+      <motion.div  
+      initial={{y:100 , opacity : 0}}
+      whileInView={{y:0 , opacity:1 }}
+      transition={{duration:1, ease: "easeInOut"}}
+      id="footer"
         className="top  relative w-full h-fit lg:pb-[25%] text-center  "
       >
         <div  className=" lg:w-[80%] w-[90%] m-auto flex  justify-between py-12 lg:px-16 border-b-2 ">
@@ -53,12 +57,15 @@ const Footer = () => {
         </h2>
 
         {/* vadilal */}
-        <h2
+        <motion.h2
+        initial={{y:100 , opacity : 0}}
+        whileInView={{y:0 , opacity:1 }}
+        transition={{duration:1, ease: "easeInOut"}}
           className=" hidden lg:flex text-[20vmax] lg:text-[30vmax] absolute -bottom-[60%] lg:-bottom-[44%] right-6 lg:right-28 leading-0 font-custom"
         >
           Vadilal
-        </h2>
-      </div>
+        </motion.h2>
+      </motion.div>
     </div>
   );
 };

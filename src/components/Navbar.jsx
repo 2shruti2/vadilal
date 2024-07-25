@@ -5,12 +5,15 @@ import { useRef, useState } from "react";
 import { Tilt } from "react-tilt";
 import { MdOutlineClose } from "react-icons/md";
 import img from "../assets/product-assets/pint.jpg";
+import { motion } from "framer-motion";
 // import img2 from "../assets/product-assets/vadilal-logo.jpeg";
 
 
 gsap.registerPlugin(CSSRulePlugin);
 
 const Navbar = ({logo}) => {
+
+  
   const [sideBar, setSideBar] = useState(false);
   useGSAP(() => {
     let tl = gsap.timeline();
@@ -23,8 +26,7 @@ const Navbar = ({logo}) => {
       });
       tl.from(".nav", {
         opacity: 0,
-        y: 10,
-        delay: 0.3,
+        rotate: 90,
         stagger: 0.2,
       });
     }
@@ -32,12 +34,15 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20">
-        <img
+      <nav className="w-full bg-[#e8e2d6]  py-2 flex justify-center items-center z-20">
+        <motion.img
+         initial={{y:30 , opacity : 0}}
+         whileInView={{y:0 , opacity:1 }}
+         transition={{duration:1, ease: "easeInOut"}}
           src={logo}
           className=" w-24 lg:w-36"
-          alt=""
-        ></img>
+          alt="logo"
+        ></motion.img>
 
         {/* TOOGLE  BUTTON */}
         <div
@@ -92,7 +97,7 @@ const Navbar = ({logo}) => {
 
             <div className="right w-full lg:w-1/2  h-1/2  lg:h-full flex flex-col gap-8">
               
-              <div className="w-full flex flex-col gap-4 items-center lg:items-end lg:pr-28 lg:pt-10 lg:gap-8">
+              <div className="w-full flex flex-col gap-4 items-center lg:items-end lg:pr-28 lg:pt-10 lg:gap-8 ">
                 {[
                   { title: "Home", nav: "#Home" },
                   { title: "Products", nav: "#Products" },
@@ -100,9 +105,11 @@ const Navbar = ({logo}) => {
                   { title: "Contact", nav: "#Contact" },
                 ].map((item) => {
                   return (
-                    <span
+                    <div className="w-fit h-fit overflow-hidden">
+
+<span
                       key={item.title}
-                      className="nav  inline-block cursor-pointer h-fit text-[5vmax] lg:ml-8 w-fit hover:border-b-2"
+                      className="nav  inline-block cursor-pointer h-fit text-[5vmax] lg:ml-8 w-fit origin-left  rotate-0 opacity-100 "
                     >
                       <a
                         onClick={() => {
@@ -113,6 +120,8 @@ const Navbar = ({logo}) => {
                         {item.title}
                       </a>
                     </span>
+                    </div>
+                    
                   );
                 })}
               </div>
