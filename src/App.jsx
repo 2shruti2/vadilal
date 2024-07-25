@@ -40,6 +40,9 @@ function App() {
           <Hero   /> 
           <MarqueeSlider />
           <Waah/>      
+          <HorizontalSection/>
+          <Advertisemts/>
+          {/* <ProductSection/> */}
           <Footer/>
         </main>
       )}
