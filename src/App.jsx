@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { useEffect, useState } from "react";
+import { useEffect , useState } from "react";
 import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
 import MarqueeSlider from "./sections/MarqueeSlider";
@@ -10,9 +10,12 @@ import Waah from "./sections/Waah";
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
+  
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    
     const handleLoad = () => {
       setTimeout(() => {
         setLoading(false);
@@ -26,6 +29,7 @@ function App() {
       return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
+
 
   return (
     <>
