@@ -32,25 +32,23 @@ const Navbar = ({logo}) => {
 
   return (
     <>
-      <nav className="w-full bg-blue-200 bg-transparent py-4 absolute top-0 flex justify-center items-center z-20">
+      <nav className="w-full bg-white  py-2 flex justify-center items-center z-20">
         <img
           src={logo}
-          className="w-28 opacity-100"
+          className=" w-24 lg:w-36"
           alt=""
         ></img>
 
         {/* TOOGLE  BUTTON */}
         <div
-          // ref={toggleButton}
           onClick={() => {
             setSideBar(!sideBar);
-            console.log(sideBar)
           }}
-          className="btn opacity-100 absolute top-0 right-0 lg:right-24  w-20 h-20 flex justify-center items-center  z-[2] cursor-pointer"
+          className="btn opacity-100 fixed top-5 lg:top-0  right-8 lg:right-24 w-5 lg:w-20 h-5 lg:h-20 flex justify-center items-center  z-[2] cursor-pointer"
           id="toggelBtn"
         >
-          <div className="button-outline button-outline1  absolute w-16 h-16 border-[1px] border-white "></div>
-          <div className="button-outline button-outline2  absolute w-16 h-16 border-[1px] border-white"></div>
+          <div className="button-outline button-outline1  absolute  w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black "></div>
+          <div className="button-outline button-outline2  absolute   w-10 lg:w-16 h-10 lg:h-16 border-[1px] border-black"></div>
           <div id="hamburger">
             <span> </span>
           </div>
@@ -58,7 +56,7 @@ const Navbar = ({logo}) => {
 
         {/* sidebar */}
         {sideBar && (
-          <div className="sideBar w-full text-white h-screen fixed top-0 overflow-hidden  bg-[#00626B] lg:flex  px-4 md:px-8 py-4 z-[9999]">
+          <div className="sideBar w-full text-white h-screen fixed top-0 right-0  overflow-hidden  bg-[#00626B] lg:flex  px-4 md:px-8 py-4 z-[9999]">
             <button
                 onClick={() => {
                   setSideBar(!sideBar);
@@ -104,7 +102,7 @@ const Navbar = ({logo}) => {
                   return (
                     <span
                       key={item.title}
-                      className="nav inline-block cursor-pointer h-fit text-[5vmax] lg:ml-8 w-fit hover:border-b-2"
+                      className="nav  inline-block cursor-pointer h-fit text-[5vmax] lg:ml-8 w-fit hover:border-b-2"
                     >
                       <a
                         onClick={() => {
