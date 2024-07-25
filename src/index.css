@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -196,7 +197,7 @@
     display: inline-block;
     width: 24px;
     height: 1.25px;
-    background: #Fff;
+    background: black;
     transition: transform 0.25s;
 
   }
@@ -207,7 +208,7 @@
     content: "";
     width: 18px;
     height: 1.25px;
-    background: #fff;
+    background: black;
     transform: translateY(-4px);
     transition: transform 0.25s;
   }
@@ -396,8 +397,7 @@
 
   /* our products section end */
 
- 
-/* horizontal scroll section start */
+  /* horizontal scroll section start */
 
 .scroll-section-outer {
   overflow: hidden;
@@ -429,4 +429,11 @@
 
 /* horizontal scroll section end */
 
+}
+
+@font-face {
+  font-family: 'panther_hunter';
+  src: url('./fonts/panther_hunter.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }

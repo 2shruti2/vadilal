@@ -1,9 +1,7 @@
-
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
-// import OurProduct from "./sections/our-products/OurProduct"
 import MarqueeSlider from "./sections/MarqueeSlider";
 import LocomotiveScroll from "locomotive-scroll";
 import Footer from "./components/Footer";
@@ -21,7 +19,7 @@ function App() {
     const handleLoad = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 4200);
     };
 
     if (document.readyState === "complete") {
@@ -37,16 +35,13 @@ function App() {
       {loading ? (
         <ScreenLoader />
       ) : (
-        <>
-          <Navbar logo={"assets/vadilal.jpeg"}/>
-          <Hero /> 
+        <main >
+          <Navbar logo={"assets/vadial logo.webp"}/>
+          <Hero   /> 
           <MarqueeSlider />
-          <Waah/>
-          <HorizontalSection/>
-          <Advertisemts/>
-          {/* <ProductSection /> */}
+          <Waah/>      
           <Footer/>
-        </>
+        </main>
       )}
     </>
   );
