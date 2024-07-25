@@ -6,9 +6,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    box-sizing: border-box;
-  }
 
   body {
     @apply font-paytone overflow-x-hidden;
@@ -162,178 +159,116 @@
 
   /* marquee section end  */
 
-  /* our products section start */
+  /* our advertisement section start */
 
-  .slider-container{
-    position: relative;
-  }
-
-  #image-trackId{
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 20%;
-    top: 50%;
-    transform: translate(0%, -50%);
-  }
-  .image-track1{
-    object-fit: cover;
-    object-position: 0% center;
-    border-radius: 20px;
-  }
 
   .slideImage{
     background-position: 50% center;
   }
 
-  .productContainer{
-    font-family: "PP Editorial Old"; 
-  }
+    /* advertisement section end  */
 
-  .productContainer img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+      /* our product section start */
 
-  .productContainer h1 {
-    text-transform: uppercase;
-    font-size: 200px;
-    font-weight: 400;
-    letter-spacing: -4px;
-  }
-
-  section.hero{
-    width: 100vw;
-    height: 100vh;
-    background: url(./assets/product-assets/jumboCups.jpg) no-repeat 50% 50%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero h1{
-   font-family: "PP Editorial Old";
-   font-weight: lighter;
-  }
-
-  section.info{
-    width: 100vw;
-    height: 150vh;
-    background-color: #000;
-    color: #fff;
-  }
-
-  .header-row {
-    width: 100%;
-    height: 250px;
-    padding: 0 2em;
-  }
-
-  .header-row:nth-child(1) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .header-row:nth-child(2) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .header-info {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #000;
-    color: #fff;
-  }
-
-  .header-info p{
-    padding: 1em;
-    font-family: "PP Editorial Old";
-    font-size:  52px;
-    font-weight: lighter;
-  }
-
-.header-images {
+#main{
   width: 100%;
-  height: 250px;
-  padding: 1em;
+  height: 100%;
+  background-color: #fff;
+}
+
+#circle{
+  position: absolute;
+  left: -100vh;
+  top: 50%;
+  transform: translate(0%, -50%) rotate(100deg);
+  border-radius: 50%;
+  width: 200vh;
+  height: 200vh;
+  border: 2px solid #f0eded;
+}
+
+.stripe{
   display: flex;
-  gap: 1em;
-}
-
-.header-images img{
-  height: 100%;
-  width: 100%;
-}
-
-section.pinned{
   position: absolute;
-  top: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
   width: 100%;
-  height: 250vh;
-  z-index: 2;
+  height: 60px;
+  transform-origin: 0% 50%;
 }
 
-section.whitespace{
+.str1{
+  transform: translate(0, -50%) rotate(-20deg);
+}
+
+.str2{
+  transform: translate(0, -50%) rotate(-10deg);
+}
+
+.str4{
+  transform: translate(0, -50%) rotate(10deg);
+}
+
+.str5{
+  transform: translate(0, -50%) rotate(20deg);
+}
+
+.first{
+  width: 50%;
+  height: 100%;
   position: relative;
-  width: 100%;
-  height: 300vh;
-  background-color: #000;
-  z-index: -1;
 }
 
-.revealer{
+.smcircle{
   position: absolute;
-  transform: translate(-50% 0%);
-  left: 35%;
-  margin-top: 325px;
-  width: 120px;
-  height: 120px;
+  right: -0.3vw;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 50%;
+  width: 0.5vw;
+  height: 0.5vw;
+  background-color: #5a595977;
 }
 
-
-.revealer .revealer-1{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.sec{
+  opacity: 0.4;
+  padding-left: 30px;
+  width: 50%;
   height: 100%;
-  background-color: #fff;
-  clip-path: polygon(45% 0%, 55% 0%, 55% 100%, 45% 100%);
 }
 
-.revealer .revealer-2{
+.sec h1{
+  font-size: 2vw;
+}
+
+.sec h6{
+  font-size: 1vw;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+#panel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(90deg);
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  clip-path: polygon(45% 0%, 55% 0%, 55% 100%, 45% 100%);
+  right: 3%;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 5%;
+  height: 30%;
 }
 
-section.white-content {
-  position: relative;
-  width: 100%;
-  height: 150vh;
-  background-color: #fff;
-  z-index: 10;
+.mncircle{
+  cursor: pointer;
+  border-radius: 50%;
+  width: 1vw;
+  height: 1vw;
+  opacity: 0.08;
+  background-color: rgb(0, 0, 0);
 }
-
-.website-content h1{
-  font-size: 72px;
-  letter-spacing: 0;
-}
-
   /* our products section end */
   
 }

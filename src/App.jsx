@@ -3,7 +3,8 @@ import ScreenLoader from "./components/ScreenLoader";
 import Hero from "./sections/Hero";
 import MarqueeSlider from "./sections/MarqueeSlider";
 import Advertisements from "./sections/advertisements/Advertisemts"
-import Products from "./sections/products/Products"
+import ProductSection from "./sections/product-section/ProductSection"
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -28,10 +29,10 @@ function App() {
         <ScreenLoader />
       ) : (
         <>
-          {/* <Hero />
+          {/* <Hero /> */}
           <Advertisements />
-          <MarqueeSlider />                    */}
-          <Products />
+          {/* <MarqueeSlider />                    */}
+          {/* <ProductSection /> */}
         </>
       )}
     </>
